@@ -1,12 +1,23 @@
-import { HStack, Box, Text, Wrap } from '@chakra-ui/react'
+import About from '@/pages/about'
+import { 
+  HStack, 
+  Box, 
+  Text, 
+  Wrap, 
+  VStack, 
+  Divider 
+} from '@chakra-ui/react'
 import Link from 'next/link'
 
 interface HeaderProps {
-  light: boolean
+  light?: boolean
+  about?: boolean
+  career?: boolean
+  projects?: boolean
 }
 
 
-export default function Header({ light }: HeaderProps) {
+export default function Header({ light, about, career, projects }: HeaderProps) {
 
   return (
     <Box
@@ -18,18 +29,38 @@ export default function Header({ light }: HeaderProps) {
       <HStack
         justify="space-between"
       >
-        <Wrap
-          spacing="0"
-        >
-          <Text
-            as='b'
-          >Filipe</Text>
-
-          <Text
-            color="cyan.500"
-            as='b'
-          >.is</Text>
-        </Wrap>
+        {
+          about ? (
+            <Wrap>
+              <VStack align='start'>
+                <Text as='b' mb='-10px'>About Me</Text>
+                <Divider orientation="horizontal" borderColor='brand.bsb' borderWidth='2px' />
+                <Text fontWeight='light' fontSize="xs" mt='-10px'>Information About me</Text>
+              </VStack>
+            </Wrap>
+          ) : career ? (
+          <Wrap>
+            <VStack align='start'>
+              <Text as='b' mb='-10px'>Career</Text>
+              <Divider orientation="horizontal" borderColor='brand.bsb' borderWidth='2px' />
+              <Text fontWeight='light' fontSize="xs" mt='-10px'>My career so far</Text>
+            </VStack>
+          </Wrap>
+          ) : projects ? (
+          <Wrap>
+            <VStack align='start'>
+              <Text as='b' mb='-10px'>Projects</Text>
+              <Divider orientation="horizontal" borderColor='brand.bsb' borderWidth='2px' />
+              <Text fontWeight='light' fontSize="xs" mt='-10px'>What I'm Worked</Text>
+            </VStack>
+          </Wrap>
+          ) : (
+          <Wrap spacing="0">
+            <Text as='b'>Filipe</Text>
+            <Text color="brand.bsb" as='b'>.is</Text>
+          </Wrap>
+          )
+        }
 
         <HStack
           spacing={10}
