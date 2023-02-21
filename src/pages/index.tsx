@@ -27,7 +27,7 @@ export default function Home() {
                 <Text fontWeight="semibold" fontSize='7xl' color='brand.bsb'>.is()</Text>
               </HStack>
 
-              <Text fontWeight="normal" fontSize='lg' mb='20px'>I'm a Web developer</Text>
+              <Text fontWeight="normal" fontSize='lg' mb='20px'>I`m a Web developer</Text>
 
               <Button variant='outline' mt='20px'>
                 <ArrowDownIcon mr={4} />

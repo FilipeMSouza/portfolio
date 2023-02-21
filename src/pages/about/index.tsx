@@ -22,7 +22,7 @@ export default function About() {
         <HStack align='start' spacing={16}>
           <Image src='filipe.png' w='400px' h='400px' alt='Filipe Souza Placeholder' />
           <VStack align='start'>
-            <Text color='gray.900' fontWeight='medium' fontSize='xl'>I'm Filipe Souza</Text>
+            <Text color='gray.900' fontWeight='medium' fontSize='xl'>I`m Filipe Souza</Text>
             <HStack>
               <Text color='gray.900' fontWeight='medium' fontSize='2xl'>A </Text>
               <Text color='brand.bsb' fontWeight='medium' fontSize='2xl'> Web </Text>
@@ -34,7 +34,7 @@ export default function About() {
               <Text color='brand.bsb' fontWeight='normal' fontSize='md'> React.Js  </Text>
               <Text color='gray.900' fontWeight='normal' fontSize='md'>since I started working with web development.</Text>
             </HStack>
-            <Text color='gray.900' fontWeight='normal' fontSize='md'> Now I’m looking to be a React.js Expert doing every thing I can</Text>
+            <Text color='gray.900' fontWeight='normal' fontSize='md'> Now I`m looking to be a React.js Expert doing every thing I can</Text>
             <HStack pt='32px' spacing='20rem'>
               <VStack align='start' color='gray.900' justify="space-between">
                 <HStack>

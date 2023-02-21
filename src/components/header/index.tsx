@@ -51,7 +51,7 @@ export default function Header({ light, about, career, projects }: HeaderProps) 
             <VStack align='start'>
               <Text as='b' mb='-10px'>Projects</Text>
               <Divider orientation="horizontal" borderColor='brand.bsb' borderWidth='2px' />
-              <Text fontWeight='light' fontSize="xs" mt='-10px'>What I'm Worked</Text>
+              <Text fontWeight='light' fontSize="xs" mt='-10px'>What I`m Worked</Text>
             </VStack>
           </Wrap>
           ) : (

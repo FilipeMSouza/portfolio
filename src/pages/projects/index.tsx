@@ -34,7 +34,7 @@ export default function Projects() {
         {repositories.map(repository => {
 
           return (
-            <GridItem>
+            <GridItem key={repository.name}>
               <Link href={repository.html_url} target="blank">
                 <Card variant='elevated' size='sm'>
                   <CardHeader>
