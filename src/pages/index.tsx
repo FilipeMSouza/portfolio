@@ -1,51 +1,56 @@
-import Header from '@/components/header'
+
+import { Header } from '@/components/header/Header'
+import { PinIcon } from '@/components/pin'
+import SideBar from '@/components/sidebar/SideBar'
 import { ArrowDownIcon } from '@chakra-ui/icons'
-import { Box, Button, Center, HStack, Icon, Text, VStack } from '@chakra-ui/react'
+import { Box, Button, Center, Flex, HStack, Icon, IconButton, Text, useBreakpointValue, VStack } from '@chakra-ui/react'
+import Head from 'next/head'
+import { AiOutlineArrowDown } from 'react-icons/ai'
 
 
 export default function Home() {
 
-
+  const aux: string = '"WebDev"'
+  const isWideVersion = useBreakpointValue({
+    base: false,
+    lg: true,
+  })
 
 
   return (
-    <>
-      <Box bg='brand.bg'w='100%' h='100vh' p={4} color='white'>
-        <Header light={false} />
-        <Center w="100%" h="90vh">
-          <HStack>
-            <VStack mt='400px'>
-
-              <CircleIcon mb='-20px' boxSize={4} color='brand.bsb'/>
-              <Box w='2px' h='40vh' bgGradient="linear(to-b,brand.bsb,#242423)" />
-            </VStack>
-            <VStack align={'start'}>
-              <Text fontWeight="light" fontSize='lg' >Hello my name is</Text>
-
-              <HStack spacing={0}>
-                <Text fontWeight="semibold" fontSize='7xl'>Filipe Souza</Text>
-                <Text fontWeight="semibold" fontSize='7xl' color='brand.bsb'>.is()</Text>
+    <Box
+      bg='brand.bg'
+    >
+      <Head>
+        <title>Filipe Souza | Home</title>
+      </Head>
+      <Flex direction='column' h='100vh'>
+        <Header light={false} tag='Filipe' />
+        <SideBar />
+        <Center h='80vh' mt='80px'>
+          <Flex direction='row'>
+            <PinIcon />
+              <VStack align='start'>
+              <HStack spacing='0'>
+                <Text fontSize={isWideVersion? '5xl':'2xl'} >FilipeSouza</Text>
+                <Text fontSize={isWideVersion? '5xl':'2xl'} color='brand.bsb'>.is(</Text>
+                <Text fontSize={isWideVersion? '5xl':'2xl'} color='orange.400'>{aux}</Text>
+                <Text fontSize={isWideVersion? '5xl':'2xl'}color='brand.bsb'>)</Text>
               </HStack>
-
-              <Text fontWeight="normal" fontSize='lg' mb='20px'>I`m a Web developer</Text>
-
-              <Button variant='outline' mt='20px'>
-                <ArrowDownIcon mr={4} />
-                <Text fontWeight="thin" fontSize='xl'>Download CV</Text>
-              </Button>
+            
+            <Button
+              aria-label='Open Navigation'
+              fontSize='lg'
+              variant='outline'
+              gap={2}
+              ml='20px'
+              w='220px'
+              ><Icon as={AiOutlineArrowDown} /> Download CV</Button>
             </VStack>
-          </HStack>
+          </Flex>
         </Center>
-      </Box>
-    </>
+
+      </Flex>
+    </Box>
   )
 }
-
-const CircleIcon = (props: any) => (
-  <Icon viewBox="0 0 200 200" {...props}>
-    <path
-      fill="currentColor"
-      d="M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0"
-    />
-  </Icon>
-)

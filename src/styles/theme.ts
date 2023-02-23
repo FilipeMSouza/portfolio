@@ -28,6 +28,7 @@ export const theme = extendTheme({
     },
     brand:{
       "bg": "#242423",
+      "lbg": "#EDF2F7",
       "bsb": "#277CE0",
       "white": "#FFFFFF",
 
@@ -63,7 +64,7 @@ export const theme = extendTheme({
   styles: {
     global: {
       body: {
-        bg: 'brand.white',
+        bg: 'brand.lbg',
         color: 'gray.50',
       }
     }
