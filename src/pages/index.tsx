@@ -25,7 +25,7 @@ export default function Home() {
             // Setting various property values
             let alink = document.createElement('a');
             alink.href = fileURL;
-            alink.download = 'SamplePDF.pdf';
+            alink.download = 'Curriculum Vitae Filipe Souza.pdf';
             alink.click();
         })
     })
