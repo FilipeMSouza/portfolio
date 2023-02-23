@@ -2,7 +2,7 @@ import { CloseIcon } from "@chakra-ui/icons";
 import { Box, Button, Divider, HStack, Text, useBreakpointValue, useDisclosure, VStack } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Z_ASCII } from "zlib";
+
 
 interface CareerButtonProps {
   title: string;
@@ -37,14 +37,14 @@ export default function CareerButton({title, date, role, functions,projects}:Car
             initial={false}
             onAnimationStart={() => setHidden(false)}
             onAnimationComplete={() => setHidden(!isOpen)}
-            animate={{ width: isOpen ? 500 : 0 }}
+            animate={{ width: isOpen ? isWideVersion ? '700px' : '350px' : '0px' }}
             style={{
               background: '#fff',
               overflow: 'hidden',
               whiteSpace: 'nowrap',
               position: 'absolute',
               right: '0',
-              height: '35vh',
+              height: `${isWideVersion ? '35vh':"50vh"}`,
               top: '100px',
               padding: '20px',
               zindex: '100px',
@@ -75,7 +75,7 @@ export default function CareerButton({title, date, role, functions,projects}:Car
               {projects?.map((item) => {
                 return (
                   <Box key={item} mt='10px' maxWidth='350px'>
-                    <Text >{item}</Text>
+                    <Text fontSize={isWideVersion?'ls':"xs"}>{item}</Text>
                   </Box>
                 )
               })}
