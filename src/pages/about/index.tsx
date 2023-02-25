@@ -31,7 +31,7 @@ export default function About() {
               <VStack align={isWideVersion ? 'start' : 'center'}>
                 <Text fontSize={isWideVersion ? '3xl' : '2xl'}> I`m Filipe Souza</Text>
                 <Text fontSize={isWideVersion ? '3xl' : '2xl'} w={isWideVersion ? '' : '350px'}>A Web Developer Based In Brazil</Text>
-                <Text fontSize={isWideVersion ? 'xl' : 'lg'} w={isWideVersion ? '450px' : '350px'}>Using React.Js since I started working with web development. Now I’m looking to be a React.js Expert doing every thing I can</Text>
+                <Text fontSize={isWideVersion ? 'xl' : 'lg'} w={isWideVersion ? '450px' : '350px'}>Using React.Js since I started working with web development. Now I’m looking to be a React.js Expert doing everything I can</Text>
               </VStack>
 
               <VStack pt={4} align={isWideVersion ? 'start' : 'center'} color='gray.900' justify="space-between">
