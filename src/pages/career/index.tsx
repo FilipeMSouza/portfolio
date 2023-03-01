@@ -33,6 +33,7 @@ export default function Career() {
               {careerData.map((item) => {
                 return (
                   <CareerCard
+                    key={item.title}
                     date={item.date}
                     role={item.role}
                     title={item.title}

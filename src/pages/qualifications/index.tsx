@@ -25,6 +25,7 @@ export default function Qualifications() {
               {qualifyData.map((item) => {
                 return (
                     <QualyCard
+                      key={item.school}
                       school={item.school}
                       date={item.date}
                       subject={item.subject}

@@ -34,7 +34,7 @@ export default function CareerCard({ title, date, role, functions, projects }: C
               </Heading>
               {functions?.map((item) => {
                 return (
-                  <Text fontSize={isWideVersion ? 'xl' : ''} fontWeight='light'>{item}</Text>
+                  <Text key={item} fontSize={isWideVersion ? 'xl' : ''} fontWeight='light'>{item}</Text>
                 )
               })}
             </Box>
@@ -45,7 +45,7 @@ export default function CareerCard({ title, date, role, functions, projects }: C
               </Heading>
               {projects?.map((item) => {
                 return (
-                  <Text fontSize={isWideVersion ? 'xl' : ''} fontWeight='light'>{item}</Text>
+                  <Text key={item} fontSize={isWideVersion ? 'xl' : ''} fontWeight='light'>{item}</Text>
                 )
               })}
             </Box>
