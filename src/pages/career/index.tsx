@@ -1,11 +1,10 @@
-import ObjetoButton from "@/components/careerButons/Objeto";
 import { Header } from "@/components/header/Header";
 import SideBar from "@/components/sidebar/SideBar";
-import { useBreakpointValue, useDisclosure, Box, Stack, Text, Button, Center } from "@chakra-ui/react";
+import { useBreakpointValue, useDisclosure, Box, Stack, Text, Center, Card, CardHeader, CardBody, StackDivider, Heading, Grid } from "@chakra-ui/react";
 import { careerData } from "../../assets/data";
 import { useState } from "react";
-import CareerButton from "@/components/careerButons/Objeto";
 import Head from "next/head";
+import CareerCard from "@/components/cards/CareerCard";
 
 
 export default function Career() {
@@ -28,28 +27,20 @@ export default function Career() {
       >
         <Header light={true} tag="Career" />
         <SideBar />
-        <Center h={isWideVersion ? '70vh' : ''}>
-
-          <Stack direction={isWideVersion ? 'row' : 'column'} align='center' spacing='3px' p={10}>
-            <>
+        <Center p='5'>
+          <Box>
+            <Grid templateColumns={isWideVersion ? 'repeat(2, 1fr)' : ''} gap={6}>
               {careerData.map((item) => {
                 return (
-
-                  <>
-                    <CareerButton
-                      title={item.title}
-                      date={item.date}
-                      role={item.role}
-                      functions={item.functions}
-                      projects={item.projects} />
-                    <Box w={isWideVersion ? '150px' : '1px'} h={isWideVersion ? '1px' : '150px'} bg='brand.bsb' />
-                  </>
-                )
-              })
-              }
-            </>
-            <Text fontSize={isWideVersion ? '3xl' : '2xl'} fontWeight='bold'>Today</Text>
-          </Stack>
+                  <CareerCard
+                    date={item.date}
+                    role={item.role}
+                    title={item.title}
+                    functions={item.functions}
+                    projects={item.projects} />
+                )})}
+            </Grid>
+          </Box>
         </Center>
       </Box>
     </>

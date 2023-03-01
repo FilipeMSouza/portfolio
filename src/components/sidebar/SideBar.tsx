@@ -18,12 +18,9 @@ export default function SideBar() {
 
   const { isOpen, onClose } = useSidebarDrawer()
 
-  const isSidebar = useBreakpointValue({
-    base: true,
-    lg: false,
-  })
 
-if(isSidebar){
+
+
     return (
       <Drawer isOpen={isOpen} placement='right' onClose={onClose}>
         <DrawerOverlay>
@@ -37,6 +34,5 @@ if(isSidebar){
         </DrawerOverlay>
       </Drawer>
     )
-    }
-    return (<></>)
+
 }

@@ -3,6 +3,7 @@ import { useSidebarDrawer } from "@/contexts/SideBarContexts"
 import { RiMenuLine } from "react-icons/ri"
 import { Logo } from "./Logo"
 import { SidebarNav } from "../sidebar/Navigation"
+import SideBar from "../sidebar/SideBar"
 
 interface HeaderProps {
   light?: boolean
@@ -32,7 +33,7 @@ export const Header = ({ light, tag }: HeaderProps) => {
     >
 
       <Logo light={light} tag={tag}/>
-      {!isWideVersion && (
+    
       <IconButton
         aria-label='Open Navigation'
         icon={<Icon color={light? 'brand.bg':'brand.lbg'} as={RiMenuLine} />}
@@ -41,9 +42,6 @@ export const Header = ({ light, tag }: HeaderProps) => {
         onClick={onOpen}
         ml='20'
       />
-      )}
-
-      {isWideVersion && (<SidebarNav light={light}/>)}
 
     </Flex>
 
