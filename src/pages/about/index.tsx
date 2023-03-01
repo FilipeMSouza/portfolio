@@ -1,3 +1,4 @@
+import { AboutDetails } from "@/components/aboutInfo/AboutDetails";
 import { Header } from "@/components/header/Header";
 import SideBar from "@/components/sidebar/SideBar";
 import { Text, Box, Center, Image, Stack, useBreakpointValue, VStack, HStack, Divider } from "@chakra-ui/react";
@@ -26,7 +27,7 @@ export default function About() {
         <Center h='70vh'>
           <Stack direction={isWideVersion ? 'row' : 'column'} align={isWideVersion ? 'start' : 'center'}>
             <Image src='filipe.svg' w={isWideVersion ? '400px' : '200px'} h={isWideVersion ? '400px' : '200px'} alt='Filipe Souza Placeholder' />
-            <Stack align={isWideVersion ? 'start' : 'center'}>
+              <Stack align={isWideVersion ? 'start' : 'center'} >
 
               <VStack align={isWideVersion ? 'start' : 'center'}>
                 <Text fontSize={isWideVersion ? '3xl' : '2xl'}> I`m Filipe Souza</Text>
@@ -51,11 +52,11 @@ export default function About() {
                 </HStack>
                 <Divider />
               </VStack>
-
             </Stack>
 
           </Stack>
         </Center>
+
       </Box>
     </>
   )
