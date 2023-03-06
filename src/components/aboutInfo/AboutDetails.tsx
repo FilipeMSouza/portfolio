@@ -1,4 +1,4 @@
-import { Box, Center, Grid, HStack, Stack, Text, VStack, useBreakpointValue} from "@chakra-ui/react"
+import { Box, Center, Grid, HStack, Stack, Text, VStack, useBreakpointValue, Card } from "@chakra-ui/react"
 
 export const AboutDetails = () => {
 
@@ -8,62 +8,61 @@ export const AboutDetails = () => {
   })
 
   return (
+    <Center>
       <Box
-        w="100%"
-        bg='brand.bg'
-        >
+        w="70%"
+      >
 
         <Stack
-          direction={isWideVersion?'row':'column'}
-          align='center'>
-            
+          direction={isWideVersion ? 'row' : 'column'}
+        >
 
-            <Grid templateColumns={isWideVersion ? 'repeat(4, 1fr)' : ''} p={6} gap={5}>
+          <Grid templateColumns={isWideVersion ? 'repeat(4, 1fr)' : ''} p={6} gap={5}>
 
-              <Stack>
-                <VStack align='start'>
+            <Card bg='brand.bg' px={2} py={1}>
+              <VStack align='center' px={2}>
                 <HStack>
-                  <Text fontSize='5xl'fontWeight='bold' color='brand.bsb'>+</Text>
-                  <Text fontSize='5xl'fontWeight='bold' color='brand.lbg'>1</Text>
+                  <Text fontSize='5xl' fontWeight='bold' color='brand.bsb'>+</Text>
+                  <Text fontSize='5xl' fontWeight='bold' color='brand.lbg'>1y</Text>
                 </HStack>
-                  <Text fontSize='lg'fontWeight='light' color='brand.lbg'>Year working as developer</Text>
-                </VStack>
-              </Stack>
+                <Text fontSize='md' fontWeight='light' color='brand.lbg'>As developer</Text>
+              </VStack>
+            </Card>
 
-              <Stack>
-                <VStack align='start'>
+            <Card bg='brand.bg' px={2} py={1}>
+              <VStack align='center' px={2}>
                 <HStack>
-                  <Text fontSize='5xl'fontWeight='bold' color='brand.bsb'>+</Text>
-                  <Text fontSize='5xl'fontWeight='bold' color='brand.lbg'>3</Text>
+                  <Text fontSize='5xl' fontWeight='bold' color='brand.bsb'>+</Text>
+                  <Text fontSize='5xl' fontWeight='bold' color='brand.lbg'>3y</Text>
                 </HStack>
-                  <Text fontSize='lg'fontWeight='light' color='brand.lbg'>Years studying React.js</Text>
-                </VStack>
-              </Stack>
+                <Text fontSize='md' fontWeight='light' color='brand.lbg'>Studying React.js</Text>
+              </VStack>
+            </Card>
 
-              <Stack>
-                <VStack align='start'>
+            <Card bg='brand.bg' px={2} py={1}>
+              <VStack align='center' px={2}>
                 <HStack>
-                  <Text fontSize='5xl'fontWeight='bold' color='brand.bsb'>+</Text>
-                  <Text fontSize='5xl'fontWeight='bold' color='brand.lbg'>06</Text>
+                  <Text fontSize='5xl' fontWeight='bold' color='brand.bsb'>+</Text>
+                  <Text fontSize='5xl' fontWeight='bold' color='brand.lbg'>06</Text>
                 </HStack>
-                  <Text fontSize='lg'fontWeight='light' color='brand.lbg'>Personal projects</Text>
-                </VStack>
-              </Stack>
+                <Text fontSize='md' fontWeight='light' color='brand.lbg'>Personal projects</Text>
+              </VStack>
+            </Card>
 
-              <Stack >
-                <VStack align='start'>
+            <Card bg='brand.bg' px={2} py={1}>
+              <VStack align='center' px={2}>
                 <HStack>
-                  <Text fontSize='5xl'fontWeight='bold' color='brand.bsb'>+</Text>
-                  <Text fontSize='5xl'fontWeight='bold' color='brand.lbg'>1</Text>
+                  <Text fontSize='5xl' fontWeight='bold' color='brand.bsb'>+</Text>
+                  <Text fontSize='5xl' fontWeight='bold' color='brand.lbg'>1</Text>
                 </HStack>
-                  <Text fontSize='lg'fontWeight='light' color='brand.lbg'>Front-end courses completed</Text>
-                </VStack>
-              </Stack>
+                <Text fontSize='md' fontWeight='light' color='brand.lbg' align='center'>Front-end courses completed</Text>
+              </VStack>
+            </Card>
 
-            </Grid>
+          </Grid>
 
-            
         </Stack>
       </Box>
+    </Center>
   )
 }
